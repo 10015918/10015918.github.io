@@ -33,23 +33,23 @@
     var ctx=q.getContext('2d');
     
     var colour = () => {
-      var letters = '56789ABCDEF';
+      var letters = 'FF0';
       var color = '#';
       for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 11)];
+        color += letters[Math.floor(Math.random() * 3)];
       }
       return color;
     }
     var draw = () => {
       ctx.fillStyle='rgba(0,0,0,.065)';
       ctx.fillRect(0,0,width,height);
-      ctx.fillStyle = '#0f0';
+      ctx.fillStyle = '#f00';
       ctx.font = '10pt Georgia';
       yPositions.map((y, index) =>{
         text = Math.floor((Math.random() * 2) + 0);
         x = (index * 10)+10;
         q.getContext('2d').fillText(text, x, y);
-        if(y > 200 + Math.random()*1e4)
+        if(y > 500 + Math.random()*1e4)
         {
           yPositions[index]=0;
         }
