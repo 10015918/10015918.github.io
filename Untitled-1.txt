@@ -1,0 +1,17 @@
+1. Go to ~/.ssh
+
+2. ssh-keygen -t rsa -b 4096 -f github -q -N ""
+
+3. eval ssh-agent
+
+4. ssh-add ~/.ssh/github
+
+===============
+
+On the github website do this:
+
+1. go to https://github.com/settings/keys
+
+2. cat github.pub
+
+3. paste in the github.pub value
